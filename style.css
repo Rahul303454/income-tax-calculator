@@ -94,6 +94,11 @@ h2 {
   animation: fadeIn 0.8s ease;
 }
 
+/* Initially hidden */
+.hidden {
+  display: none;
+}
+
 #taxHint table {
   width: 100%;
   border-collapse: collapse;
