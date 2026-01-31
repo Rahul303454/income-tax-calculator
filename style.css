@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 0;
+  color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Main Card */
+#parent {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  text-align: center;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.6);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+h2 {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Hint Box */
+#taxHint {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px 15px;
+  font-size: 12px;
+  color: #f8fafc;
+  width: 350px;  /* smaller than main card */
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.8s ease;
+}
+
+#taxHint table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#taxHint th, #taxHint td {
+  padding: 5px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#taxHint th {
+  font-weight: 600;
+  background: rgba(255,255,255,0.1);
+}
+
+#taxHint tr:nth-child(even) {
+  background: rgba(255,255,255,0.05);
+}
+
+#taxHint tr:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  text-align: left;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  #parent, #taxHint {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
